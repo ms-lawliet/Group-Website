@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Infix</title>
+</head>
+<body>
+    <div id="main">
+        <div id="title">
+            <h1>Infix to Postfix</h1>
+        </div>
+        <form action="/infix-postfix" method="post">
+            <label for="input_infix">Enter input:</label>
+            <input type="text" id="input_infix" name="infix"><br>
+            <input type="submit" value="Calculate">
+        </form>
+
+        {% if result %}
+        <pre>{{ result }}</pre>
+        {% endif %}
+
+    </div>
+</body>
+</html>
