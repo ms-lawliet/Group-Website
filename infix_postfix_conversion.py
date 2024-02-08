@@ -3,6 +3,7 @@ class Node:
         self.data = data
         self.next = None
 
+
 class Stack:
     def __init__(self):
         self.top = None
@@ -45,6 +46,7 @@ class Stack:
             current_node = current_node.next
         return count
 
+
 def shunting_yard(infix):
     precedence = {'+': 1, '-': 1, '*': 2, '/': 2, '^': 3}
 
@@ -71,10 +73,12 @@ def shunting_yard(infix):
 
     return output
 
+
 def infix_to_postfix(infix):
     infix_tokens = list(infix)
     postfix_tokens = shunting_yard(infix_tokens)
     return postfix_tokens
+
 
 def infix_to_postfix(infix):
     precedence = {'+': 1, '-': 1, '*': 2, '/': 2, '^': 3}
@@ -106,3 +110,4 @@ def infix_to_postfix(infix):
         output.append(ops_stack.pop())
 
     joint = ''.join(output)
+    return joint
