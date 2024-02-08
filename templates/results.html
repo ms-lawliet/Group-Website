@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+    <link rel="stylesheet" href="/static/results.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P">
+</head>
+<body>
+    <header>
+        <a href="/work1"><img src="/static/left.png" id="left"></a>
+        <img src="/static/results.png" id="title" class="title">
+    </header>
+    <div class="container">
+        <div class="profile">
+            <h1>Table 1.Search Algorithm Analysis Worksheet</h1>
+            <img src="/static/table1.png" id="table-pic">
+            <div class="info">
+            </div>
+        </div>
+        <div class="profile" id="graphs">
+            <figure>
+                <img src="/static/fig1.png" id="graph">
+                <figcaption>Figure 1.</figcaption>
+            </figure>
+            <figure>
+                <img src="/static/fig2.png" id="graph">
+                <figcaption>Figure 2.</figcaption>
+            </figure>
+            <figure>
+                <img src="/static/fig3.png" id="graph">
+                <figcaption>Figure 3.</figcaption>
+            </figure>
+            <div class="info">
+            </div>
+        </div>
+        <div class="profile" id="aleckxis">
+            <h1>ANALYSIS AND CONCLUSION</h1>
+            <div class="info">
+                <h2>a. Which search algorithm performed the best overall?</h2>
+                <p>
+                    As evident in Table 1 and the fourth figure shown above, the interpolation
+                    search algorithm performed the best overall. Across all the trials in the
+                    given target sets 100, 1000, and 10000, this type of search algorithm garnered
+                    the least average execution time. Therefore, this result only serves as evidence
+                    that among all the different algorithms, the interpolation search algorithm is the
+                    fastest.
+                </p>
+                <h2>b. Did any search algorithms perform better on specific data sets?</h2>
+                <p>
+                    As shown in table 1, the average execution time of Interpolation is 0.0067ms making
+                    it the fastest search algorithm. Interpolation search works well on uniformly distributed
+                    and sorted data. It's particularly efficient when the data set has a linear distribution.
+                    Binary search is effective on sorted data sets. In cases where the data is not uniformly
+                    distributed, or there are repeated elements, it might perform better than interpolation search.
+                    Ternary search is useful when the data is sorted but not as effective as binary search in many
+                    cases. It divides the search space into three parts instead of two. Exponential search is
+                    efficient when there is a known upper bound on the size of the data set. It works particularly
+                    well when the target element is likely to be close to the beginning of the array. Jump search
+                    is effective for large, uniformly distributed data sets. It combines aspects of linear search
+                    and binary search, making it suitable for cases where binary search might be impractical.
+                    Linear search is generally less efficient than binary search on large, sorted datasets
+                    because it has only a linear time complexity. In all the given data sets (100,1000,10000),
+                    there is no better search algorithm to use than Interpolation.
+                </p>
+                <h2>c. How did the size of the data set affect the performance of the search algorithms?</h2>
+                <p>
+                    Throughout the laboratory exercise, our close collaboration focused on analyzing and optimizing
+                    search algorithms, revealing a clear correlation between the size of the data and algorithm
+                    performance. As the size of the data set increased, so did the time complexity of the various
+                    search algorithms. This pattern demonstrated that larger data sets generally created difficulties
+                    for search operations, necessitating a review of algorithm choices and observation into
+                    optimization strategies to preserve efficiency when dealing with significant volumes of data.
+                </p>
+                <h2>d. Write a brief conclusion summarizing your findings.</h2>
+                <p>
+                    In conclusion, the average execution time of Interpolation is 0.0067ms making it the fastest
+                    search algorithm, while Binary has an average of 0.0069ms, Ternary has 0.0105ms, Exponential
+                    has 0.0135ms, Jump has 0.0143ms, and lastly is the Linear which has 0.2397ms that implies the
+                    slowest among all search algorithm. Moreover, the study highlighted the impact of data set size
+                    on algorithm performance. As the size of the data set increased, the time complexity of the
+                    search algorithms also escalated. This observation underscores the need for careful consideration
+                    and optimization of algorithm choices, especially when dealing with larger volumes of data.
+                    The efficiency of the interpolation search algorithm positions it as a favorable choice for
+                    scenarios where speed is crucial, while the study provides valuable insights into the nuanced
+                    relationship between algorithm performance and data set size.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

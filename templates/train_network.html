@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Train Network</title>
+    <link rel="stylesheet" href="/static/train_network.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P">
+</head>
+<body>
+    <div id="main">
+        <header id="header">
+            <nav id="nav-bar">
+                <ul>
+                    <li>
+                        <a class="nav-link" href="/work5">
+                            <div class="pop-up">
+                                <img src="/static/ball.png" class="shake" id="nav-pic">
+                                <span class="pop-uptext">GO BACK</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <div id="program">
+        <img src="/static/train.png" id="title" class="search">
+          <form method="post">
+            <div class="mb-3">
+              <label for="starting_station" class="form-label start">Select Starting Station:</label><br><br>
+              <select class="form-select mb-3" id="starting_station" name="starting_station">
+                <!-- LRT 2 -->
+                <option value="Recto" class="lrt2">Recto</option>
+                <option value="Legarda" class="lrt2">Legarda</option>
+                <option value="Pureza" class="lrt2">Pureza</option>
+                <option value="V. Mapa" class="lrt2">V. Mapa</option>
+                <option value="J. Ruiz" class="lrt2">J. Ruiz</option>
+                <option value="Gilmore" class="lrt2">Gilmore</option>
+                <option value="Betty Go" class="lrt2">Betty Go</option>
+                <option value="Cubao LRT Line" class="lrt2">Cubao LRT Line</option>
+                <option value="Anonas" class="lrt2">Anonas</option>
+                <option value="Katipunan" class="lrt2">Katipunan</option>
+                <option value="Santolan" class="lrt2">Santolan</option>
+                <option value="Marikina Pasig" class="lrt2">Marikina Pasig</option>
+                <option value="Antipolo" class="lrt2">Antipolo</option>
+                <!-- LRT 1 -->
+                <option value="Baclaran" class="lrt1">Baclaran</option>
+                <option value="Edsa" class="lrt1">Edsa</option>
+                <option value="Libertad" class="lrt1">Libertad</option>
+                <option value="Gil Puyat" class="lrt1">Gil Puyat</option>
+                <option value="Vito Cruz" class="lrt1">Vito Cruz</option>
+                <option value="Quirino" class="lrt1">Quirino</option>
+                <option value="Pedro Gil" class="lrt1">Pedro Gil</option>
+                <option value="United Nations Avenue" class="lrt1">United Nations Avenue</option>
+                <option value="Central Terminal" class="lrt1">Central Terminal</option>
+                <option value="Carriedo" class="lrt1">Carriedo</option>
+                <option value="Doroteo Jose" class="lrt1">Doroteo Jose</option>
+                <option value="Bambang" class="lrt1">Bambang</option>
+                <option value="Tayuman" class="lrt1">Tayuman</option>
+                <option value="Blumentritt" class="lrt1">Blumentritt</option>
+                <option value="Abad Santos" class="lrt1">Abad Santos</option>
+                <option value="R. Papa" class="lrt1">R. Papa</option>
+                <option value="5th Avenue" class="lrt1">5th Avenue</option>
+                <option value="Monumento" class="lrt1">Monumento</option>
+                <option value="Balintawak" class="lrt1">Balintawak</option>
+                <option value="Roosevelt" class="lrt1">Roosevelt</option>
+                <!-- MRT -->
+                <option value="North Ave" class="mrt">North Ave</option>
+                <option value="Quezon Ave" class="mrt">Quezon Ave</option>
+                <option value="GMAKamuning" class="mrt">GMAKamuning</option>
+                <option value="Cubao MRT Line" class="mrt">Cubao MRT Line</option>
+                <option value="Santolan-Annapolis" class="mrt">Santolan-Annapolis</option>
+                <option value="Ortigas" class="mrt">Ortigas</option>
+                <option value="Shaw Boulevard" class="mrt">Shaw Boulevard</option>
+                <option value="Boni" class="mrt">Boni</option>
+                <option value="Guadalupe" class="mrt">Guadalupe</option>
+                <option value="Buendia" class="mrt">Buendia</option>
+                <option value="Ayala" class="mrt">Ayala</option>
+                <option value="Magallanes" class="mrt">Magallanes</option>
+                <option value="Taft Ave" class="mrt">Taft Ave</option>
+                <option value="Edsa" class="mrt">Edsa</option>
+              </select>
+          </div>
+            <label for="target_station" class="form-label">Select Target Destination:</label>
+            <select class="form-select mb-3" id="target_station" name="target_station">
+                <!-- LRT 2 -->
+                <option value="Recto" class="lrt2">Recto</option>
+                <option value="Legarda" class="lrt2">Legarda</option>
+                <option value="Pureza" class="lrt2">Pureza</option>
+                <option value="V. Mapa" class="lrt2">V. Mapa</option>
+                <option value="J. Ruiz" class="lrt2">J. Ruiz</option>
+                <option value="Gilmore" class="lrt2">Gilmore</option>
+                <option value="Betty Go" class="lrt2">Betty Go</option>
+                <option value="Cubao LRT Line" class="lrt2">Cubao LRT Line</option>
+                <option value="Anonas" class="lrt2">Anonas</option>
+                <option value="Katipunan" class="lrt2">Katipunan</option>
+                <option value="Santolan" class="lrt2">Santolan</option>
+                <option value="Marikina Pasig" class="lrt2">Marikina Pasig</option>
+                <option value="Antipolo" class="lrt2">Antipolo</option>
+                <!-- LRT 1 -->
+                <option value="Baclaran" class="lrt1">Baclaran</option>
+                <option value="Edsa" class="lrt1">Edsa</option>
+                <option value="Libertad" class="lrt1">Libertad</option>
+                <option value="Gil Puyat" class="lrt1">Gil Puyat</option>
+                <option value="Vito Cruz" class="lrt1">Vito Cruz</option>
+                <option value="Quirino" class="lrt1">Quirino</option>
+                <option value="Pedro Gil" class="lrt1">Pedro Gil</option>
+                <option value="United Nations Avenue" class="lrt1">United Nations Avenue</option>
+                <option value="Central Terminal" class="lrt1">Central Terminal</option>
+                <option value="Carriedo" class="lrt1">Carriedo</option>
+                <option value="Doroteo Jose" class="lrt1">Doroteo Jose</option>
+                <option value="Bambang" class="lrt1">Bambang</option>
+                <option value="Tayuman" class="lrt1">Tayuman</option>
+                <option value="Blumentritt" class="lrt1">Blumentritt</option>
+                <option value="Abad Santos" class="lrt1">Abad Santos</option>
+                <option value="R. Papa" class="lrt1">R. Papa</option>
+                <option value="5th Avenue" class="lrt1">5th Avenue</option>
+                <option value="Monumento" class="lrt1">Monumento</option>
+                <option value="Balintawak" class="lrt1">Balintawak</option>
+                <option value="Roosevelt" class="lrt1">Roosevelt</option>
+                <!-- MRT -->
+                <option value="North Ave" class="mrt">North Ave</option>
+                <option value="Quezon Ave" class="mrt">Quezon Ave</option>
+                <option value="GMAKamuning" class="mrt">GMAKamuning</option>
+                <option value="Cubao MRT Line" class="mrt">Cubao MRT Line</option>
+                <option value="Santolan-Annapolis" class="mrt">Santolan-Annapolis</option>
+                <option value="Ortigas" class="mrt" class="mrt">Ortigas</option>
+                <option value="Shaw Boulevard" class="mrt">Shaw Boulevard</option>
+                <option value="Boni" class="mrt">Boni</option>
+                <option value="Guadalupe" class="mrt">Guadalupe</option>
+                <option value="Buendia" class="mrt">Buendia</option>
+                <option value="Ayala" class="mrt">Ayala</option>
+                <option value="Magallanes" class="mrt">Magallanes</option>
+                <option value="Taft Ave" class="mrt">Taft Ave</option>
+                <option value="Edsa" class="mrt">Edsa</option>
+            </select>
+            <button type="submit" class="btn btn-primary" >FIND SHORTEST PATH</button>
+          </form>
+          <div class="result-container">
+            <img src="/static/stations.png" id="stations-pic">
+            <div class="results">
+                <h2>SHORTEST PATH:</h2>
+                <div class="path">
+                    {% for station in result %}
+                    <div class="station">{{ station }}</div>
+                    {% endfor %}
+                </div>
+                <h1>Total distance from starting station to target destination: {{ distance }} km.</h1>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

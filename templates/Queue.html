@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/queue.css">
+    <title>Queue</title>
+    
+</head>
+<body>
+    <div id="main">
+        <header id="header">
+            <nav id="nav-bar">
+                <ul>
+                    <li>
+                        <a class="nav-link" href="/work3">
+                            <div class="pop-up">
+                                <img src="/static/ball.png" class="shake" id="nav-pic">
+                                <span class="pop-uptext">GO BACK</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div id="top">
+            <img src="/static/queuee.png" id="title" class="search">
+            <div id="container">
+                <form action="/queue" method="post" class="input-group" id="button-container">
+                    <div id="input-button-container">
+                        <div id="input-container">
+                          <label for="data">Enter input:</label>
+                          <input type="text" id="data" name="data">
+                        </div>
+                    
+                        <button type="submit" name="usage" value="enqueue">Enqueue</button>
+                        <button type="submit" name="usage" value="dequeue">Dequeue</button>
+                      </div>
+                    
+                </form>
+                <div id="result-container">
+                    {% if linked_list_data %}
+                        <p>Linked List Data:</p>
+                        <ul>
+                            {% for item in linked_list_data %}
+                                <li>{{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>  
+            </div>
+        </div>
+    </div>
+</body>
+</html>

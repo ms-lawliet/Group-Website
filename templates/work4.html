@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hash Table</title>
+    <link rel="stylesheet" href="/static/work4.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P">
+</head>
+<body>
+    <header id="header">
+        <nav id="nav-bar">
+            <ul>
+                <li>
+                    <a class="nav-link" href="/works">
+                        <div class="pop-up">
+                            <img src="/static/ball.png" class="shake" id="nav-pic">
+                            <span class="pop-uptext">WORKS</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div id="content">
+        <div id="top">
+            <a href="/work3"><img src="/static/left.png" id="left"></a>
+            <img src="/static/hashtable.png" id="title" class="search">
+            <a href="/work5"><img src="/static/right.png" id="right"></a>
+        </div>
+        <div id="container">
+            <div class="detailcontainer">
+                <div id="details">
+                    <h1>Objective:</h1>
+                    <br>
+                    <p>
+                        Implement an insertion and a deletion of 10-letter words in a hash table with the following
+                        parameters:
+                    </p>
+                    <br>
+                    <p>1.) The size of the hash table is m = 32.</p>
+                    <br>
+                    <p>
+                        2.) The key k is equal to the sum of the ASCII values of each character in the given 10-character
+                        string.
+                    </p>
+                    <br>
+                    <p>3.) Three different hash functions will be used:</p>
+                    <br>
+                    <p>• Hash function 1: f(k) = k mod m</p>
+                    <p>• Hash function 2: f(k) = ((1731 * k + 520123) mod 524287) mod m</p>
+                    <p>• Hash function 3: default hash method of python</p>
+                    <br>
+                    <p>
+                        4.) Deletion of a key from the hash table is preceded by the prefix "del " followed by the
+                        10-letter word to be deleted.
+                    </p>
+                    <br>
+                    <h2>Instructions:</h2>
+                    <br>
+                    <h3>Input page Format</h3>
+                    <br>
+                    <p>The input will contain the following:</p>
+                    <br>
+                    <p>• Dropdown box with option to select what hash function to used.</p>
+                    <p>
+                        • An input textbox that will accept an integer indicates how many commands are to be executed on
+                        the hash table.
+                    <br>
+                    <p>
+                        • A textarea that for the sequence of commands performed on the hashtable separated by new line
+                        (a "del " prefix before word means that 10-letter word will be deleted from the hash table,
+                        otherwise, the 10-letter word should be inserted to the hash table).
+                    </p>
+                    <br>
+                    <h3>Output page Format</h3>
+                    <br>
+                    <p>
+                        The output should list the elements of the hash table. For all indices in the table from 0 to 31,
+                        output the list for each slot in the hash table. The list for each slot will be a stack. That is,
+                        whenever a collision occurs, new elements will be pushed at the head of the stack.
+                    </p>
+                </div>
+                <div class="buttons">
+                    <div class="result-button"><a href="/hashtable">CREATE HASH TABLE</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

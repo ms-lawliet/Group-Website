@@ -3,22 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Infix</title>
+    <link rel="stylesheet" href="/static/infix.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P">
 </head>
 <body>
     <div id="main">
-        <div id="title">
-            <h1>Infix to Postfix</h1>
+        <a href="/work2"><img src="/static/left.png" id="left"></a>
+        <img src="/static/infixpostfix.png" id="title" class="search">
+        <div class="program">
+            <div class="content">
+                <form action="/infix-postfix" method="post">
+                    <label for="input_infix">Enter input:</label><br>
+                    <input type="text" id="input_infix" name="infix"><br>
+                    <input type="submit" value="Calculate">
+                </form>
+                <div class="result">
+                    {% if result %}
+                    <pre>{{ result }}</pre>
+                    {% endif %}
+                </div>
+            </div>
         </div>
-        <form action="/infix-postfix" method="post">
-            <label for="input_infix">Enter input:</label>
-            <input type="text" id="input_infix" name="infix"><br>
-            <input type="submit" value="Calculate">
-        </form>
-
-        {% if result %}
-        <pre>{{ result }}</pre>
-        {% endif %}
-
     </div>
 </body>
 </html>

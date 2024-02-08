@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sorting Algorithms</title>
+    <link rel="stylesheet" href="/static/sorting.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P">
+</head>
+<body>
+    <div id="main">
+        <header id="header">
+            <nav id="nav-bar">
+                <ul>
+                    <li>
+                        <a class="nav-link" href="/work6">
+                            <div class="pop-up">
+                                <img src="/static/ball.png" class="shake" id="nav-pic">
+                                <span class="pop-uptext">GO BACK</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <div class="container">
+        <div class="title"><img src="/static/sorting.png" id="title" class="search"></div>
+      <form method="post">
+        <div class="mb-3">
+      </div>
+        <label for="num-list" class="label">Enter a list of numbers (separated by comma):</label>
+            <textarea class="form-control" id="num-list" name="num-list" rows="1" required>{{ random_integers }}</textarea>
+            <label for="sorting_type" class="form-label">Sorting Algorithms</label>
+            <select class="form-select mb-3" id="sorting_type" name="sorting_type">
+              <option value="bubble_sort">Bubble Sort</option>
+              <option value="selection_sort">Selection Sort</option>
+              <option value="insertion_sort">Insertion Sort</option>
+              <option value="merge_sort">Merge Sort</option>
+              <option value="quick_sort">Quick Sort</option>
+            </select>
+        <button type="submit" class="btn btn-primary">EXECUTE</button>
+      </form>
+      <div class="result-container">
+        <div class="result-heading">Sorted List:</div><br>
+        <ul class="route-list">
+            {% for x in result %}
+                <li class="route-list-item">{{ x }}</li>
+            {% endfor %}<br>
+            <div>Time: {{ time }}</div>
+        </ul>
+        </div>
+    </div>
+</body>
+</html>

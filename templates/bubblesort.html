@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/bubblesort.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P">
+    <title>Bubble Sort Animation</title>
+</head>
+<body>
+    <header id="header">
+        <nav id="nav-bar">
+            <ul>
+                <li>
+                    <a class="nav-link" href="/bubble">
+                        <div class="pop-up">
+                            <img src="/static/ball.png" class="shake" id="nav-pic">
+                            <span class="pop-uptext">GO BACK</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div id="top">
+        <img src="/static/BubbleSOrt.png" id="title" class="search">
+    </div>
+    <div id="content">
+        <p> ASCENDING</p>
+        <div id="container"></div>
+        <div id="input-button-container">
+            <div id="input-container">
+                <label for="data">Enter number:</label>
+                <input type="text" id="data" name="data">
+                <button type="button" onclick="enterBubbleValue()">Enter</button>
+            </div>
+            <div id="buttons">
+                <button type="button" onclick="startBubbleSort()">Start</button>
+                <button type="button" onclick="clearBubbles()">Clear</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const container = document.getElementById("container");
+        const inputElement = document.getElementById("data");
+        const startButton = document.querySelector('button:last-of-type');
+
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        async function swap(el1, el2) {
+            const tempTransform = el1.style.transform;
+            el1.style.transform = el2.style.transform;
+            el2.style.transform = tempTransform;
+
+            // Update numerical values
+            const tempValue = el1.innerHTML;
+            el1.innerHTML = el2.innerHTML;
+            el2.innerHTML = tempValue;
+
+            await sleep(500); // Adjust the duration of the swap animation
+        }
+
+        async function bubbleSort(bubbles) {
+            for (let i = 0; i < bubbles.length; i++) {
+                for (let j = 0; j < bubbles.length - i - 1; j++) {
+                    bubbles[j].style.backgroundColor = "#FF4949";
+                    bubbles[j + 1].style.backgroundColor = "#FF4949";
+
+                    const value1 = Number(bubbles[j].innerHTML);
+                    const value2 = Number(bubbles[j + 1].innerHTML);
+
+                    // Highlight the two bubbles being checked
+                    await highlightBubbles([bubbles[j], bubbles[j + 1]], "#FF4949");
+
+                    if (value1 > value2) {
+                        await swap(bubbles[j], bubbles[j + 1]);
+                    }
+
+                    // Revert to the default color
+                    bubbles[j].style.backgroundColor = "#3498db";
+                    bubbles[j + 1].style.backgroundColor = "#3498db";
+                }
+            }
+        }
+
+        async function highlightBubbles(bubbles, color) {
+            // Highlight bubbles with the specified color
+            bubbles.forEach(bubble => {
+                bubble.style.backgroundColor = color;
+            });
+
+            // Wait for a short duration (you can adjust this duration)
+            await sleep(300);
+
+            // Revert to the default color
+            bubbles.forEach(bubble => {
+                bubble.style.backgroundColor = "#3498db";
+            });
+        }
+        const bubbles = [];
+        let currentBubbleIndex = 0;
+        let sortingStarted = false;
+
+        function enterBubbleValue() {
+            if (!sortingStarted) {
+                const value = Number(inputElement.value);
+
+                // Check if the entered value is a valid number
+                if (isNaN(value)) {
+                    alert("Error: Please Only Input Numbers");
+                    return;
+                }
+
+                inputElement.value = "";
+
+                const bubble = document.createElement("div");
+                bubble.classList.add("bubble");
+                bubble.innerHTML = value;
+                container.appendChild(bubble);
+                bubbles.push(bubble);
+                currentBubbleIndex++;
+
+                // Continue entering values
+                inputElement.focus();
+            }
+        }
+
+
+        function startBubbleSort() {
+            sortingStarted = true;
+            bubbleSort(bubbles);
+        }
+        function clearBubbles() {
+            // Clear all the entered numbers and reset the animation
+            container.innerHTML = "";
+            bubbles.length = 0;
+            currentBubbleIndex = 0;
+            sortingStarted = false;
+
+            // Reset the input field and focus on it
+            inputElement.value = "";
+            inputElement.focus();
+        }
+        // Initially focus on the input when the page loads
+        inputElement.focus();
+    </script>
+</body>
+</html>
+

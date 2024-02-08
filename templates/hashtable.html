@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hash Table</title>
+    <link rel="stylesheet" href="/static/hashtable.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P">
+</head>
+<body>
+    <div id="main">
+    <header id="header">
+            <nav id="nav-bar">
+                <ul>
+                    <li>
+                        <a class="nav-link" href="/work4">
+                            <div class="pop-up">
+                                <img src="/static/ball.png" class="shake" id="nav-pic">
+                                <span class="pop-uptext">GO BACK</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div id="top">
+            <img src="/static/hashtable.png" id="title" class="search">
+        </div>
+        <div class="program">
+            <div class="container">
+              <form method="post">
+
+                <label for="selected_hash_function" class="form-label">Choose a hash function:</label><br>
+                <select class="form-select mb-3" id="selected_hash_function" name="hash_function">
+                  <option value="hash_function_1">Hash Function 1</option>
+                  <option value="hash_function_2">Hash Function 2</option>
+                  <option value="hash_function_3">Hash Function 3</option>
+                </select><br>
+
+                  <label for="num_commands" class="form-label">Enter number of commands:</label><br>
+                  <textarea id="num_commands" name="num_commands"></textarea><br>
+
+                <label for="commands" class="form-label">Input string (by line):</label>
+                  <textarea class="form-control mb-3" id="commands" name="commands" placeholder="Type here :)"></textarea><br>
+                <button type="submit" class="btn btn-primary">EXECUTE</button>
+
+                <div class="output">
+                  <h2><- HASH TABLE -></h2>
+                  <hr>
+                  <div class="scrollable-container">
+                    {% for index, slot in output.items() %}
+                        <p>{{ index }}: {% for key in slot %} {{ key }} {% endfor %}</p>
+                    {% endfor %}
+                  </div>
+                </div>
+              </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
