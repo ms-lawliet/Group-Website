@@ -144,7 +144,7 @@
   position: absolute;
   align-items: center;
   justify-content: center;
-  top: 22%;
+  top: 24%;
   left: 5%;
   right: 5%;
   gap: 2rem;
@@ -152,8 +152,8 @@
 }
 
 .work {
-  height: 200px;
-  width: 200px;
+  height: 180px;
+  width: 180px;
   border-radius: 10%;
 }
 
@@ -223,6 +223,20 @@
 .flip5:hover {
   background: url("/static/caterpie.png") no-repeat;
   background-position-x: center;
+  background-position-y: center;
+  background-size: cover;
+}
+
+.flip6 {
+  background: url("/static/pokemon1.png") no-repeat;
+  background-position-x: center;
+  background-position-y: center;
+  background-size: cover;
+}
+
+.flip6:hover {
+  background: url("/static/gyarados.png") no-repeat;
+  background-position-x: left;
   background-position-y: center;
   background-size: cover;
 }

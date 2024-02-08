@@ -96,21 +96,15 @@ html {
   position: fixed;
   display: flex;
   flex-direction: column;
-  background: url("/static/beach.gif") no-repeat;
+  background: url("/static/swirl.gif") no-repeat;
   background-size: cover;
-  background-position-y: bottom;
+  background-position-y: top;
 }
 
 #top {
   display: flex;
   height: 21vh;
   width: 100vw;
-  background: url("/static/wave.gi") no-repeat;
-  background-size: cover;
-  background-position-x: center;
-  background-position-y: bottom;
-  justify-content: center;
-  align-items: center;
 }
 
 #left {
@@ -120,11 +114,15 @@ html {
 
 #title {
   margin: auto;
-  width: 60%;
+  width: 50%;
   height: 95%;
   z-index: 1;
   left: 50%;
-  margin-left: 250px;
+}
+
+#left {
+  height: 19vh;
+  margin-left: 200px;
 }
 
 #right {
@@ -171,6 +169,37 @@ html {
   -webkit-text-stroke-color: black;
   margin: 15px 30px 10px 30px;
   border-radius: 50px 5px 5px 50px;
+  text-align: justify;
+}
+
+.test-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background: rgb(0, 0, 0, 0.7);
+  font-family: "Press Start 2P";
+  height: 30px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.test-button a {
+  text-decoration: none;
+  color: white;
+}
+
+.test-button a:hover {
+  color: red;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  width: 100vw;
+  margin-left: 2%;
+  margin-top: 5%;
 }
 
 .buttons {
@@ -179,15 +208,8 @@ html {
 }
 
 .result-button {
-  width: 220px;
-  margin-left: 2%;
-}
-
-.first {
-  margin-left: 7%;
-}
-
-.result-button, .test-button {
+  width: 280px;
+  margin: 0 auto;
   font-family: "Press Start 2P";
   color: white;
   background: rgb(0, 0, 0, 0.9);
@@ -196,16 +218,12 @@ html {
   text-align: center;
 }
 
-.test-button {
-  width: 250px;
-}
-
-.result-button a, .test-button a {
+.result-button a {
   color: white;
   text-decoration: none;
 }
 
-.result-button a:hover, .test-button a:hover {
+.result-button a:hover {
   color: red;
 }
 

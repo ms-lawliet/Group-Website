@@ -24,7 +24,10 @@ html {
   align-items: center;
   position: fixed;
 }
-
+.buttons {
+  display: flex;
+  gap: 2rem;
+}
 #nav-bar li {
   list-style: none;
 }
@@ -118,13 +121,17 @@ html {
   margin-left: 200px;
 }
 
+#right {
+  height: 19vh;
+  margin-right: 190px;
+}
+
 #title {
   margin: auto;
   width: 60%;
   height: 95%;
   z-index: 1;
   left: 50%;
-  margin-right: 250px;
 }
 
 .search {
