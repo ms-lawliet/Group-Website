@@ -1,0 +1,286 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow: hidden;
+  height: 100%;
+}
+
+
+#header {
+  display: flex;
+  position: absolute;
+  z-index: 2;
+  margin: 15px 0;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}
+
+.input-group {
+  text-align: center;
+  margin-top: 20px;
+}
+#input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#input_infix {
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  width: 300px;
+}
+
+#input_infix:focus {
+  outline: none;
+  border-color: dodgerblue;
+}
+
+input[type="submit"] {
+  padding: 10px 15px;
+  font-size: 1em;
+  background-color: rgb(9, 84, 159);
+  color: rgb(255, 238, 0);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: royalblue;
+  animation: rainbow 2s linear infinite;
+}
+
+label {
+  font-family: "Press Start 2P";
+  font-size: 1.5em;
+  color: white;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 2px black;
+}
+
+.search {
+  animation: pulse 1.5s linear infinite;
+  width:75%;
+  height: 75%;
+}
+
+@-webkit-keyframes "pulse" {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(0.95);
+  }
+  50% {
+    transform: scale(0.90);
+  }
+  75% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#result-container {
+  width: 80%;
+  max-width: 600px; /* Adjust the max-width as needed */
+  margin: 20px auto; /* Center the container */
+  background-color: #f8f8f8; /* Light background color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px;
+  color: #333; /* Dark text color */
+  font-family: "Press Start 2P", sans-serif;
+  transition: transform 0.3s ease; /* Add transition for smooth movement */
+}
+
+/* Add this style for centered print queue button */
+#print-queue {
+  display: block;
+  margin: auto;
+}
+
+
+
+#nav-bar ul {
+  display: flex;
+  font-size: 1.2rem;
+  height: 70px;
+  gap: 1rem;
+  align-items: center;
+  position: fixed;
+}
+
+#nav-bar li {
+  list-style: none;
+}
+
+#nav-pic {
+  height: 80px;
+  width: 80px;
+}
+
+#nav-pic:hover {
+  animation: shake 0.2s infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0px) rotate(0deg);
+  }
+
+  20% {
+    transform: translateX(-4px) rotate(-4deg);
+  }
+
+  40% {
+    transform: translateX(-2px) rotate(-2deg);
+  }
+
+  60% {
+    transform: translateX(2px) rotate(2deg);
+  }
+
+  80% {
+    transform: translateX(4px) rotate(4deg);
+  }
+
+  100% {
+    transform: translateX(0px) rotate(0deg);
+  }
+}
+
+.pop-up {
+  position: relative;
+  display: inline-block;
+}
+
+.pop-up .pop-uptext {
+  visibility: hidden;
+  width: 135%;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5.5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 3;
+  transform: translate(-89%, 85px);
+}
+
+.pop-uptext {
+  font-family: "Press Start 2P";
+  font-size: 0.8rem;
+}
+
+.pop-up:hover .pop-uptext {
+  visibility: visible;
+}
+
+body {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: url("/static/infixbg.gif") no-repeat center bottom fixed;
+  background-size: cover;
+  background-position: center bottom -180px;
+  font-family: "Press Start 2P";
+}
+
+#main {
+  position: relative;
+}
+
+#top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Press Start 2P";
+}
+
+#title {
+  margin: auto;
+  width: 30%;
+  height: 65%;
+  z-index: 1;
+  left: 50%;
+}
+
+#container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#result-container:hover {
+  animation: rainbow 2s linear infinite;
+}
+
+@keyframes rainbow {
+  0% {
+    color: violet;
+  }
+  16.666% {
+    color: indigo;
+  }
+  33.333% {
+    color: blue;
+  }
+  50% {
+    color: green;
+  }
+  66.666% {
+    color: yellow;
+  }
+  83.333% {
+    color: orange;
+  }
+  100% {
+    color: red;
+  }
+}
+
+form {
+  text-align: center;
+  margin-top: 20px;
+}
+button[type="submit"] {
+  padding: 10px 15px;
+  font-size: 1em;
+  font-family: "Press Start 2P";
+  background-color: rgb(9, 84, 159);
+  color: rgb(255, 238, 0);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 5px; /* Add margin to buttons for spacing */
+  display: inline-block; /* Display buttons in a row */
+}
+
+button[type="submit"]:hover {
+  background-color: royalblue;
+  font-family: "Press Start 2P";
+  animation: rainbow 2s linear infinite;
+}
+
+#button-container {
+  display: flex;
+  font-family: "Press Start 2P";
+  gap: 10px; /* Adjust the gap between buttons */
+  justify-content: center; /* Center the buttons horizontally */
+}

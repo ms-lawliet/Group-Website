@@ -1,0 +1,62 @@
+* {
+  font-family: "Press Start 2P";
+}
+
+label {
+  font-size: 2rem;
+}
+
+.program {
+  display: flex;
+  justify-content: center;
+  padding-top: 1.5rem;
+  background: rgb(0, 0, 0, 0.5);
+  line-height: 2rem;
+  overflow: auto;
+}
+
+body {
+  background: url("/static/village1.gif");
+  background-size: fill;
+  text-align: center;
+  color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+#left {
+  height: 125px;
+  margin-left: -80px;
+  margin-right: 40px;
+  transform: translateY(-20px);
+}
+
+#title {
+  width: 600px;
+  height: 150px;
+  margin-left: 100px;
+  margin-right: 200px;
+}
+
+#input_infix {
+  height: 2rem;
+  border-color: rgb(0, 0, 0, 0.8);
+}
+
+input[type="submit"] {
+  height: 1.5rem;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+pre {
+  font-size: 1.5rem;
+}
+
+.content {
+  width: 40%;
+}
+
+.result {
+  text-align: left;
+}
